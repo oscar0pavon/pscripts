@@ -1,0 +1,6 @@
+#!/bin/sh
+
+source=$(pulsemixer --list-sources | grep WEBCAM | awk '{print $3}')
+source="${source//,}"
+echo $source
+

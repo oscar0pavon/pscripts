@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/root/disk/sources/netbsd/build.sh -U -u -m amd64 -j32 -O /root/disk/netbsd/ kernel=MYKERNEL

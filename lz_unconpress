@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for package in $(ls | grep lz4)
+do
+  echo "$package"
+  lz4 -d $package
+done

@@ -1,0 +1,23 @@
+#!/bin/bash
+touch /tmp/screen_capture_status
+printf -v date '%(%Y-%m-%d_%H:%M:%S)T'
+
+# </tmp/screen_capture_status ffmpeg -f x11grab -s 1360x768 -threads 16 -r 25 \
+# 	-i $DISPLAY.0+0 -c:v libx264 -c:a aac /root/captures/$date.mp4 -f pulse -i 0
+	#-i alsa_input.usb-VNV_ABKO_APC930_QHD_WEBCAM-02.stereo-fallback\
+
+
+# </tmp/screen_capture_status ffmpeg -f x11grab -s 1360x768 -threads 16 -r 25 \
+# 	-i :0+1 -c:v libx264 -c:a aac /root/captures/$date.mp4 -f pulse -i 0
+
+
+ # </tmp/screen_capture_status ffmpeg -f pulse -i 0 -f pulse -i alsa_input.hw_1_0 -ac 1 -f x11grab -s 1920x1080 -threads 16 -r 25 \
+ # 	-i :0+1 -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p /root/captures/$date.mp4
+
+ # </tmp/screen_capture_status ffmpeg -f pulse -i 0 -f alsa -i hw:2 -ac 1 -f x11grab -s 1920x1080 -threads 16 -r 25 \
+ # 	-i :0+1 -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p /root/captures/$date.mp4
+
+ ffmpeg -f pulse -i alsa_input.usb-VNV_ABKO_APC930_QHD_WEBCAM-02.analog-stereo -t 10 /root/audio/$date.wav
+
+# </tmp/screen_capture_status ffmpeg -f pulse -f x11grab -s 1920x1080 -threads 16 -r 25 \
+# 	-i :0+1 -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p /root/captures/$date.mp4

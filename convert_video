@@ -1,0 +1,4 @@
+#!/bin/sh
+wcap-decode capture.wcap --yuv4mpeg2 > capture.y4m
+
+ffmpeg -y -i /root/capture.y4m -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p sendable_video.mp4

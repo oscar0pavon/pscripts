@@ -1,0 +1,12 @@
+#!/bin/sh
+
+while :
+do
+  if [[ $(pgrep -x "dwm") ]]; then
+    #/usr/bin/pulseaudio --start --log-target=syslog
+    /usr/bin/pulseaudio --start
+  else
+    break
+  fi
+  sleep 5
+done

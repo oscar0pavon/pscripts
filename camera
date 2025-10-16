@@ -1,0 +1,7 @@
+#!/bin/sh
+
+ffplay /dev/video0 -window_title WebCam -fast -framerate 30 -max_delay 0\
+  -analyzeduration 0 -fflags +nobuffer -max_probe_packets 1 -probesize 100000\
+  -video_size 1280x720
+  #-video_size 1280x720
+

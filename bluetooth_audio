@@ -1,0 +1,5 @@
+#!/bin/sh
+mkdir -p /run/dbus
+dbus-daemon --system
+bluetoothd &
+bluetooth_speaker

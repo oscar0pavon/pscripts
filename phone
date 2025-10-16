@@ -1,0 +1,4 @@
+#!/bin/bash
+
+aft-mtp-mount /mnt/android
+thunar /mnt/android

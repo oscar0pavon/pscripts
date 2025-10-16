@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+#/usr/bin/Xorg :0 vt1 -keeptty -maxclients 2048 &
+#DISPLAY=:0
+#export DISPLAY
+#exec dwm
+
+
+#export DISPLAY=${DISPLAY:-:0}
+#trap "$HOME/.xinitrc" USR1
+export DISPLAY=:0
+trap "exec pwindow_manager" USR1
+
+(
+    trap '' USR1
+    #trap 'exit' USR1
+
+    #exec X -keeptty :0 vt1 -config /root/xorg.conf.new
+    #exec X -keeptty :0 vt1 &> /dev/null
+    exec X -keeptty :0 vt1
+
+    #exec X -keeptty :0 vt1
+) &
+
+wait

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+mkdir -p /run/dbus
+
+dbus-daemon --system
+
+bluetoothd &
+
+pulseaudio &> /dev/null

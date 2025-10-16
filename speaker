@@ -1,0 +1,10 @@
+#!/bin/sh
+#mac_speaker="C1:A8:13:6B:B3:BE"
+mac_speaker="B8:F6:53:92:E7:1F"
+connect_status=""
+ok="Connection successful"
+while [ "$connect_status" != "$ok" ]; do
+	echo "Connecting to the JBL.."
+	connect_status=$(bluetoothctl -- connect $mac_speaker | grep Connection)
+	sleep 1
+done

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+touch /scripts/$1
+chmod +x /scripts/$1
+echo "#!/bin/bash" >> /scripts/$1
+nvim /scripts/$1

@@ -1,0 +1,14 @@
+#!/bin/sh
+mac_speaker="C1:A8:13:6B:B3:BE"
+bluetoothctl -- remove $mac_speaker
+sleep 1
+bluetoothctl -- default-agent
+bluetoothctl -- power on
+sleep 1
+bluetoothctl -- trust $mac_speaker
+echo -e 'scan on\nconnect C1:A8:13:6B:B3:BE\n' | bluetoothctl
+sleep 3
+bluetoothctl -- pair $mac_speaker
+sleep 1
+sleep 1
+bluetoothctl -- connect $mac_speaker

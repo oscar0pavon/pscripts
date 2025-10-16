@@ -1,0 +1,4 @@
+#!/bin/bash
+printf -v date '%(%Y-%m-%d_%H:%M:%S)T'
+#fswebcam --no-banner --resolution 2592x1944 /root/photos/$date.jpg
+fswebcam --no-banner --delay 2 --skip 120 --resolution 1920x1080 --png 5 /root/photos/$date.png
