@@ -1,14 +1,7 @@
 #!/bin/zsh
 
-#/usr/bin/Xorg :0 vt1 -keeptty -maxclients 2048 &
-#DISPLAY=:0
-#export DISPLAY
-#exec dwm
-
-
-#export DISPLAY=${DISPLAY:-:0}
-#trap "$HOME/.xinitrc" USR1
 export DISPLAY=:0
+pkillx &
 trap "exec pwindow_manager" USR1
 
 (

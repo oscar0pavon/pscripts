@@ -7,8 +7,8 @@ printf -v date '%(%Y-%m-%d_%H:%M:%S)T'
 	#-i alsa_input.usb-VNV_ABKO_APC930_QHD_WEBCAM-02.stereo-fallback\
 
 
-</tmp/screen_capture_status ffmpeg -f x11grab -s 1360x768 -threads 16 -r 25 \
-	-i :0+1 -c:v libx264 -c:a aac /root/captures/$date.mp4 -f pulse -i 0
+</tmp/screen_capture_status ffmpeg -f x11grab -s 1920x1080 -threads 16 -r 25 \
+	-i :0.0+1080,565 -c:v libx264 -c:a aac /root/captures/$date.mp4 #-f pulse -i 0
 
 
  # </tmp/screen_capture_status ffmpeg -f pulse -i 0 -f pulse -i alsa_input.hw_1_0 -ac 1 -f x11grab -s 1920x1080 -threads 16 -r 25 \
