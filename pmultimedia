@@ -7,4 +7,8 @@ dbus-daemon --system
 
 bluetoothd &
 
-pulseaudio &> /dev/null
+audio &
+
+speaker &
+
+#pulseaudio &> /dev/null

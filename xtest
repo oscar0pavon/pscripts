@@ -6,13 +6,10 @@ trap "exec pwindow_manager" USR1
 
 (
     trap '' USR1
-    #trap 'exit' USR1
 
-    #exec X -keeptty :0 vt1 -config /root/xorg.conf.new
     #exec X -keeptty :0 vt1 &> /dev/null
-    exec X -keeptty :0 vt1
+    exec X -keeptty :0 vt1 -config /root/xorg.conf
 
-    #exec X -keeptty :0 vt1
 ) &
 reset
 

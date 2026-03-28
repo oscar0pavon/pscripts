@@ -1,0 +1,4 @@
+#!/bin/bash
+
+llama-server     -m /AI/llama3     -ngl 33     -t 24     --host 0.0.0.0     --port 8888 \
+  --webui-config-file /AI/pavonia.json

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+database &
+nginx &
+cd /var/www/ghost
+sudo -u ghost ghost start &
+#cd
+

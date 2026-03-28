@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sendmail pavon@pavon.com.py < /root/test_mail.txt

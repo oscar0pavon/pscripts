@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#llama-server \
+#taskset -c 0-8 llama-cli \
+taskset -c 0-15 llama-server \
+  -m /data3/models/Qwen2.5-Coder-7B-Instruct-IQ4_XS.gguf  \
+  -ngl 33  \
+  -t 8  \
+  -c 16384 \
+  -ctk q8_0 -ctv q8_0 \
+  --cont-batching \
+  --flash-attn on \
+  --host 0.0.0.0 \
+  --port 8888 \
+#  --api-key PAVON_KEY
+#  --chat-template qwen2

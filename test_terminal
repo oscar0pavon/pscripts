@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /root/pterminal
+./pterminal > /root/terminal.log 2>&1
+echo "finish" >> /root/terminal.log

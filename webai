@@ -1,0 +1,9 @@
+#!/bin/bash
+export WEBUI_NAME="Pavon IA"
+export WEBUI_URL="https://ia.pavon.com.py"
+export WEBUI_SESSION_COOKIE_SECURE=True
+export ENABLE_RAG_LOCAL_DIR=True
+export DATA_DIR="/data3/pavonia/"
+#export WEBUI_FAVICON_URL="https://pavon.com.py/"
+open-webui serve
+

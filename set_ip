@@ -1,8 +1,5 @@
 #!/bin/bash
 
-INTERFACE=$1
-
-ip link set $INTERFACE up
-wpa_supplicant -B -Diwlwifi -c/wifi -i$INTERFACE 
+INTERFACE=wlan0
 ip addr add 192.168.0.23/24 dev $INTERFACE 
 ip route add default via 192.168.0.1 src 192.168.0.23 dev $INTERFACE 
